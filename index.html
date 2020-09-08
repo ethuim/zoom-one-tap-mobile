@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Zoom One Tap Mobile Generator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h1>Zoom One Tap Mobile</h1>
+    <p>Generate a Zoom One Tap Mobile Number. The resulting number will be formatted like this: <span
+            style="font-style: italic;">
+            +location_number,,meetingid#,,,,,,0#,,passcode#
+        </span></p>
+    <h2>Result:</h2>
+    <div id="result_panel">
+        <a id="result_link" href=""></a>
+    </div>
+    <hr>
+    <form id="form_mobile_number">
+        <div>
+            <label for="invite_text">Paste Invite Text with meeting ID and passcode</label>
+        </div>
+        <textarea id="invite_text" cols="80" 
+        placeholder="Meeting ID: ... 
+Passcode: ..."
+            onchange="zoom_one_tap_mobile.generate_number()"></textarea>
+        <p>or</p>
+        <div>
+            <label for="meeting_id">Meeting ID</label><input id="meeting_id" type="text"></input>
+        </div>
+        <div>
+            <label for="passcode">Passcode</label><input id="passcode" type="text"></input>
+        </div>
+        <div>
+            <label for="location_num">Location Number</label>
+            <select name="location_num" id="location_num">
+                <option value="+13017158592">Germantown</option>
+                <option value="+13462487799">Houston</option>
+                <option value="+19292056099">New York</option>
+                <option value="+16699006833">San Jose</option>
+                <option value="+3126266799">Chicago</option>
+            </select>
+        </div>
+        <button id="generate_number_button" type="button"
+            onclick="zoom_one_tap_mobile.generate_number()">Generate</button>
+    </form>
+
+
+</body>
+
+</html>

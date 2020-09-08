@@ -1,0 +1,12 @@
+#result_panel{
+    border:1px solid;
+}
+#invite_text{
+    resize:vertical;
+    height:5em;
+    padding: .25em;
+}
+label{
+    font-weight: bold;
+    margin-right:.5em;
+}
